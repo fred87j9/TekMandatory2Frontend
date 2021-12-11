@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorator="layout/root_layout"
+      lang="en">
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech - Create Post</title>
+  <link th:href="@{/css/css.css}" rel="stylesheet" >
+</head>
+<body>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Facebook_New_Logo_%282015%29.svg/2560px-Facebook_New_Logo_%282015%29.svg.png" alt="Logo" width="150" height="50">
+
+<h2>Opret Post</h2>
+<br>
+<form method="POST" th:action="@{/addNewPost}">
+
+  <b>Username</b>
+<input type="text" name="name"/>
+<br>
+  <br>
+  <b>Description</b>
+<input type="text" name="postDescription"/>
+<br>
+  <br>
+  <b>Postdate</b>
+<input type="text" name="postDate"/>
+<br>
+  <br>
+  <input type="submit" value="Submit Post">
+
+<h1 th:text=${status}> </h1>
+</form>
+</body>
+<br>
+<footer>
+<h6>Coded by: Isaac, Frederik S, Oliver S & Andreas J.</h6>
+</footer>
+</html>
